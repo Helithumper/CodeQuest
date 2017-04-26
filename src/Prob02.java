@@ -33,6 +33,7 @@ private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob02.in.txt";
                 System.out.println(sum);
             }
             
+            
             // clean up
             br.close();
             fr.close();
