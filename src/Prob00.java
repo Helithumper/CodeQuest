@@ -27,9 +27,9 @@ public class Prob00 {
                 for (int i=0; i<N; i++) {
                     // read the line of text
                     inLine = br.readLine();
-                    double five = 5;
-                    double six = 6;
-                    double fiveoversix = five/six;
+                    int five = 5;
+                    int six = 6;
+                    double fiveoversix = (double)(five)/(double)(six);
                     System.out.println(fiveoversix);
   
                 }
