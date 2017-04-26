@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 
 public class Prob00 {
-    private static final String INPUT_FILE_NAME = "Prob00.in.txt";
+    private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob01.in.txt";
     
     public static void main(String[] args) {
         try {
@@ -27,7 +27,10 @@ public class Prob00 {
                 for (int i=0; i<N; i++) {
                     // read the line of text
                     inLine = br.readLine();
-                    
+                    double five = 5;
+                    double six = 6;
+                    double fiveoversix = five/six;
+                    System.out.println(fiveoversix);
   
                 }
             }
