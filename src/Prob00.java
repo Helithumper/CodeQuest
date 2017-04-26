@@ -25,9 +25,10 @@ public class Prob00 {
                 
                 // loop through the lines
                 for (int i=0; i<N; i++) {
-                    //read the line of text
+                    // read the line of text
                     inLine = br.readLine();
-                    System.out.println(inLine);
+                    
+  
                 }
             }
             
