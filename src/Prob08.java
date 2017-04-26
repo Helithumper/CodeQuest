@@ -13,7 +13,6 @@ public class Prob08 {
             BufferedReader br = new BufferedReader(fr);
             String inLine = null;
             
-            
             // get the number of test cases
             int T = Integer.parseInt(br.readLine());
             //System.out.println(T);
