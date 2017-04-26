@@ -28,16 +28,13 @@ private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob13.in.txt";
                     String[] inLineSplit = inLine.split("x");
                     blocks[i] = new Block(Integer.parseInt(inLineSplit[0]),Integer.parseInt(inLineSplit[1]),Integer.parseInt(inLineSplit[2]));
                 }
-                ArrayList<Block> bigList = new ArrayList<Block>();
-                for(Block b:blocks){
-                	for(int i = 0; i < bigList.size(); i++){
-                		if(b.getArea()<bigList.get(i).getArea()){
-                			bigList.add(i, b);
-                			break;
-                		}
+                
+                Block[] finalArray = new Block[blocks.length];
+                for(int i = 1; i < blocks.length; i++){
+                	for(int j = i ; j>0; j--){
+                		if(blocks[])
                 	}
                 }
-                System.out.println(bigList.size());
             }
             
             // clean up
@@ -46,6 +43,11 @@ private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob13.in.txt";
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    void swap(int a, int b, Block[] c){
+    	Block temp = c[a];
+    	c[a] = c[b];
+    	c[b] = temp;
     }
 }
 
