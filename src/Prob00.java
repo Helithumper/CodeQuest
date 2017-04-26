@@ -28,9 +28,7 @@ public class Prob00 {
                     // read the line of text
                     inLine = br.readLine();
                     
-                    // print it out
-                    System.out.println(inLine);
-                    System.out.println("PEYTON!!!");
+  
                 }
             }
             
