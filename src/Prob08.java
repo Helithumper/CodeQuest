@@ -1,11 +1,9 @@
-
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
 public class Prob08 {
-    private static final String INPUT_FILE_NAME = "Prob08.in.txt";
+    private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob08.in.txt";
     
     public static void main(String[] args) {
         try {
@@ -18,13 +16,12 @@ public class Prob08 {
             
             // get the number of test cases
             int T = Integer.parseInt(br.readLine());
-            
+            //System.out.println(T);
             // loop through test cases
             while (T-- > 0) {
                 // get the number of lines in each test case
                 int N = Integer.parseInt(br.readLine());
-<<<<<<< HEAD
-                System.out.println(N);
+                //System.out.println(N);
                 String plane = "";
                 int x1 = 0;
                 int y1 = 0;
@@ -37,7 +34,7 @@ public class Prob08 {
                     // read the line of text
                     for(int j = 0; j < 4; j++){
 	                	inLine = br.readLine(); 
-	                    System.out.println(inLine);
+	                    //System.out.println(inLine);
 	                    //first line = name
 	                    if (j==0){
 	                    	plane = inLine;  
@@ -74,20 +71,26 @@ public class Prob08 {
                 System.out.println("y3 = " + y3);
 				*/
                 
+                //gets the slope
                 double slope1 = (double) (y2-y1)/(double) (x2-x1);
                 double slope2 = (double)(y3-y1)/(double) (x3-x1);
+                /*
                 System.out.println("S1: " + slope1);
                 System.out.println("S2: " + slope2);
-                    
-=======
+                */
+                 
                 
-                // loop through the lines
-                for (int i=0; i<N; i++) {
-                    // read the line of text
-                    inLine = br.readLine();
-                    
-  
->>>>>>> origin/master
+                if (
+                		(slope1 <= (-0.8) && slope1 >= (-1.6))
+                		&&
+                		(slope2 <= (-0.8) && slope2 >= (-1.6))                		
+                	){
+                	System.out.println(plane + ", Clear To Land!");
+              
+                }
+                else {
+                	System.out.println(plane + ", Abort Landing!");
+                }
                 }
             }
             

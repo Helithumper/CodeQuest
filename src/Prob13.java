@@ -1,9 +1,10 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 
-public class Prob03 {
-private static final String INPUT_FILE_NAME = "./JudgingInputs/Prob03.in.txt";
+public class Prob13 {
+private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob13.in.txt";
     
     public static void main(String[] args) {
         try {
@@ -20,28 +21,19 @@ private static final String INPUT_FILE_NAME = "./JudgingInputs/Prob03.in.txt";
             while (T-- > 0) {
                 // get the number of lines in each test case
                 int N = Integer.parseInt(br.readLine());
-                
+                Block[] blocks = new Block[N];
                 // loop through the lines
                 for (int i=0; i<N; i++) {
-                    // read the line of text
                     inLine = br.readLine();
-                    int inNum = Integer.parseInt(inLine);
-                    if(inNum<1582){
-                    	System.out.println("No");
-                    }
-                    else if(inNum%4!=0){
-                    	System.out.println("No");
-                    }
-                    else if(inNum%100!=0){
-                    	System.out.println("Yes");
-                    }
-                    else if(inNum%400!=0){
-                    	System.out.println("No");
-                    }
-                    else{
-                    	System.out.println("Yes");
-                    }
-  
+                    String[] inLineSplit = inLine.split("x");
+                    blocks[i] = new Block(Integer.parseInt(inLineSplit[0]),Integer.parseInt(inLineSplit[1]),Integer.parseInt(inLineSplit[2]));
+                }
+                
+                Block[] finalArray = new Block[blocks.length];
+                for(int i = 1; i < blocks.length; i++){
+                	for(int j = i ; j>0; j--){
+                		if(blocks[])
+                	}
                 }
             }
             
@@ -52,4 +44,28 @@ private static final String INPUT_FILE_NAME = "./JudgingInputs/Prob03.in.txt";
             e.printStackTrace();
         }
     }
+    void swap(int a, int b, Block[] c){
+    	Block temp = c[a];
+    	c[a] = c[b];
+    	c[b] = temp;
+    }
+}
+
+class Block{
+	public int x;
+	public int y;
+	public int z;
+	
+	public Block(int a, int b, int c){
+		x=a;
+		y=b;
+		z=c;
+	}
+	
+	public int getArea(){
+		int one = x*y;
+		int two = y*z;
+		int three = z*x;
+		return Math.max(Math.max(one, two),three);
+	}
 }
