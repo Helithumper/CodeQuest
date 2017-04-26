@@ -23,9 +23,14 @@ public class Prob01 {
                 
                 // loop through the lines
                 for (int i=0; i<N; i++) {
-                    // read the line of text
                     inLine = br.readLine();
-                    System.out.println(inLine);
+                    String[] working = inLine.split(" ");
+                    StringBuilder sb = new StringBuilder();
+                    
+                    sb.append(Character.toUpperCase(working[0].charAt(0)));
+                    sb.append(Character.toUpperCase(working[2].charAt(0)));
+                    sb.append(Character.toUpperCase(working[1].charAt(0)));
+                    System.out.println(sb.toString());
   
                 }
             }
