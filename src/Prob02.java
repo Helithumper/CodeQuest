@@ -1,11 +1,10 @@
-
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.math.BigInteger;
 
-public class Prob00 {
-    private static final String INPUT_FILE_NAME = "Prob00.in.txt";
+public class Prob02 {
+private static final String INPUT_FILE_NAME = "./ExampleInputs/Prob02.in.txt";
     
     public static void main(String[] args) {
         try {
@@ -14,6 +13,8 @@ public class Prob00 {
             FileReader fr = new FileReader(inFile);
             BufferedReader br = new BufferedReader(fr);
             String inLine = null;
+
+            BigInteger sum = new BigInteger("0");
             
             // get the number of test cases
             int T = Integer.parseInt(br.readLine());
@@ -27,8 +28,12 @@ public class Prob00 {
                 for (int i=0; i<N; i++) {
                     //read the line of text
                     inLine = br.readLine();
-                    System.out.println(inLine);
+                    //System.out.println(inLine);
+                    BigInteger bi = new BigInteger(inLine);
+                    sum = sum.add(bi);
                 }
+                System.out.println(sum);
+                sum = new BigInteger("0");
             }
             
             // clean up
