@@ -56,6 +56,8 @@ public class Prob05 {
                 for (int k=0; k<years.length;k++){
                 	System.out.println(years[k]);
                 }
+                //
+                //Sort the arrays
                 for (int k=0; k<years.length; k++){
                 	for (int l=k+1; l<years.length; l++){
                 		if (years[k]>years[l]){
